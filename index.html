@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мухаммадамин - Дисциплина и Тайм-Менеджмент</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+    <aside class="sidebar">
+        <div class="user-card">
+            <div class="user-avatar">👨‍💻</div>
+            <h2 class="user-name">Мухаммадамин</h2>
+            <span class="user-status">Meta Engineer</span>
+        </div>
+
+        <nav class="navigation">
+            <button class="nav-btn active" onclick="switchTab('namaz')">🕌 Время Намаза</button>
+            <button class="nav-btn" onclick="switchTab('routine')">🌅 Утро / 🌃 Вечер</button>
+            <button class="nav-btn" onclick="switchTab('sport')">🤸‍♂️ Спорт и Рост</button>
+            <button class="nav-btn" onclick="switchTab('coding')">💻 Центр Кодинга</button>
+        </nav>
+
+        <div class="clock-widget">
+            <div id="live-time">00:00:00</div>
+            <div id="live-date">16 мая 2026 г.</div>
+        </div>
+
+        <div class="progress-box">
+            <div class="progress-labels">
+                <span>Прогресс дня:</span>
+                <span id="progress-percent">0%</span>
+            </div>
+            <div class="progress-line">
+                <div id="progress-fill" class="progress-bar"></div>
+            </div>
+            <p class="motivate-text">Начни день продуктивно! 🔥</p>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <section id="tab-namaz" class="tab-section active">
+            <h1 class="page-title">Духовная Дисциплина (Намаз)</h1>
+            <div class="card">
+                <div class="card-header border-green">
+                    <h3>Пять обязательных молитв в день</h3>
+                </div>
+                <div class="tasks-container">
+                    <label class="task-row">
+                        <div class="task-left">
+                            <input type="checkbox" class="task-checkbox" id="namaz-1">
+                            <span class="bullet-check"></span>
+                            <span class="time-block">05:00</span>
+                            <span class="text-block">Фаджр</span>
+                        </div>
+                    </label>
+                    
+                    <div class="sunrise-row">
+                        <span>Восход солнца:</span>
+                        <span class="sunrise-time">05:55</span>
+                    </div>
+
+                    <label class="task-row">
+                        <div class="task-left">
+                            <input type="checkbox" class="task-checkbox" id="namaz-2">
+                            <span class="bullet-check"></span>
+                            <span class="time-block">13:30</span>
+                            <span class="text-block">Зухр</span>
+                        </div>
+                    </label>
+
+                    <label class="task-row">
+                        <div class="task-left">
+                            <input type="checkbox" class="task-checkbox" id="namaz-3">
+                            <span class="bullet-check"></span>
+                            <span class="time-block">18:30</span>
+                            <span class="text-block">Аср</span>
+                        </div>
+                    </label>
+
+                    <label class="task-row">
+                        <div class="task-left">
+                            <input type="checkbox" class="task-checkbox" id="namaz-4">
+                            <span class="bullet-check"></span>
+                            <span class="time-block">20:20</span>
+                            <span class="text-block">Магриб</span>
+                        </div>
+                    </label>
+
+                    <label class="task-row">
+                        <div class="task-left">
+                            <input type="checkbox" class="task-checkbox" id="namaz-5">
+                            <span class="bullet-check"></span>
+                            <span class="time-block">22:57</span>
+                            <span class="text-block">Иша</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab-routine" class="tab-section">
+            <h1 class="page-title">Дневной Распорядок</h1>
+            <div class="grid-two-columns">
+                <div class="card">
+                    <div class="card-header border-yellow">
+                        <h3>🌅 Утренний режим</h3>
+                    </div>
+                    <div class="tasks-container">
+                        <label class="task-row">
+                            <div class="task-left">
+                                <input type="checkbox" class="task-checkbox" id="morning-1">
+                                <span class="bullet-check"></span>
+                                <span class="time-block">05:15</span>
+                                <span class="text-block">Подъем, стакан теплой воды и пробежка</span>
+                            </div>
+                        </label>
+                        <label class="task-row">
+                            <div class="task-left">
+                                <input type="checkbox" class="task-checkbox" id="morning-2">
+                                <span class="bullet-check"></span>
+                                <span class="time-block">06:00</span>
+                                <span class="text-block">Завтрак + Спирулина и Верблюжье молоко</span>
+                            </div>
+                        </label>
+                        <label class="task-row">
+                            <div class="task-left">
+                                <input type="checkbox" class="task-checkbox" id="morning-3">
+                                <span class="bullet-check"></span>
+                                <span class="time-block">14:00</span>
+                                <span class="text-block">Английский язык (20 минут грамматики)</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header border-blue">
+                        <h3>🌙 Вечерний режим</h3>
+                    </div>
+                    <div class="tasks-container">
+                        <label class="task-row">
+                            <div class="task-left">
+                                <input type="checkbox" class="task-checkbox" id="evening-1">
+                                <span class="bullet-check"></span>
+                                <span class="time-block">21:30</span>
+                                <span class="text-block">Прием чистой воды и легкий отдых</span>
+                            </div>
+                        </label>
+                        <label class="task-row">
+                            <div class="task-left">
+                                <input type="checkbox" class="task-checkbox" id="evening-2">
+                                <span class="bullet-check"></span>
+                                <span class="time-block">22:00</span>
+                                <span class="text-block">Выключение телефона и глубокий сон</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab-sport" class="tab-section">
+            <h1 class="page-title">Физическое Развитие и Рост</h1>
+            <div class="card">
+                <div class="card-header border-pink">
+                    <h3>🤸‍♂️ Тренировки для позвоночника и выносливости</h3>
+                </div>
+                <div class="tasks-container">
+                    <label class="task-row">
+                        <div class="task-left">
+                            <input type="checkbox" class="task-checkbox" id="sport-1">
+                            <span class="bullet-check"></span>
+                            <span class="time-block">05:30</span>
+                            <span class="text-block">Вис на турнике после пробежки (вытяжение)</span>
+                        </div>
+                    </label>
+                    <label class="task-row">
+                        <div class="task-left">
+                            <input type="checkbox" class="task-checkbox" id="sport-2">
+                            <span class="bullet-check"></span>
+                            <span class="time-block">05:45</span>
+                            <span class="text-block">Прыжки на скакалке (10-15 минут активно)</span>
+                        </div>
+                    </label>
+                    <label class="task-row">
+                        <div class="task-left">
+                            <input type="checkbox" class="task-checkbox" id="sport-3">
+                            <span class="bullet-check"></span>
+                            <span class="time-block">16:30</span>
+                            <span class="text-block">Упражнение "Кобра" для ровной осанки</span>
+                        </div>
+                    </label>
+                    <label class="task-row">
+                        <div class="task-left">
+                            <input type="checkbox" class="task-checkbox" id="sport-4">
+                            <span class="bullet-check"></span>
+                            <span class="time-block">17:00</span>
+                            <span class="text-block">Волейбол / Баскетбол (активная тренировка)</span>
+                        </div>
+                    </label>
+                    <label class="task-row">
+                        <div class="task-left">
+                            <input type="checkbox" class="task-checkbox" id="sport-5">
+                            <span class="bullet-check"></span>
+                            <span class="time-block">21:00</span>
+                            <span class="text-block">Комплекс растяжки спины перед отдыхом</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab-coding" class="tab-section">
+            <h1 class="page-title">Лаборатория Программирования</h1>
+            <div class="card">
+                <div class="card-header border-cyan">
+                    <h3>💻 План развития в IT</h3>
+                </div>
+                <div class="tasks-container">
+                    <label class="task-row">
+                        <div class="task-left">
+                            <input type="checkbox" class="task-checkbox" id="code-1">
+                            <span class="bullet-check"></span>
+                            <span class="time-block">06:30</span>
+                            <span class="text-block">30 минут утреннего фокусного кодинга</span>
+                        </div>
+                    </label>
+                    <label class="task-row">
+                        <div class="task-left">
+                            <input type="checkbox" class="task-checkbox" id="code-2">
+                            <span class="bullet-check"></span>
+                            <span class="time-block">19:00</span>
+                            <span class="text-block">Разбор сложных тем HTML/CSS и селекторов</span>
+                        </div>
+                    </label>
+                    <label class="task-row">
+                        <div class="task-left">
+                            <input type="checkbox" class="task-checkbox" id="code-3">
+                            <span class="bullet-check"></span>
+                            <span class="time-block">20:00</span>
+                            <span class="text-block">Обновление личного сайта и коммит на GitHub</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
